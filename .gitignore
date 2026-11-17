@@ -1,0 +1,22 @@
+# ---- 密钥与本地配置 ----
+.env
+.env.local
+!.env.example
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# ---- 运行时产物 ----
+# 存档记录每次生成几百 KB，默认不入库；要展示某条可 git add -f records/<id>
+records/
+*.log
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

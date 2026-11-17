@@ -1,0 +1,19 @@
+{
+  "material": "石灰岩",
+  "hardness": "soft",
+  "design_tph": 300,
+  "current_tph": 230,
+  "target_tph": 350,
+  "products": ["0-5", "5-10", "10-25", "25-31.5"],
+  "symptoms": ["0-5 粉多", "电费高", "产能不足"],
+  "site": {"w": 90, "d": 45},
+  "shift_hours": 10,
+  "price_cny_per_t": 55,
+  "existing": [
+    {"role": "feed", "eq_id": "FD_ZSW490x110", "count": 1},
+    {"role": "primary", "eq_id": "JC_PE900x1200", "css_mm": 130, "count": 1},
+    {"role": "secondary", "eq_id": "CC_SG1650", "css_mm": 20, "count": 1},
+    {"role": "screening", "eq_id": "SC_2YK2160", "mesh_mm": [25, 10], "count": 2},
+    {"role": "washing", "eq_id": "WS_XSD3620", "count": 1}
+  ]
+}

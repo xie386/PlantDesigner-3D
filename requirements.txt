@@ -1,0 +1,7 @@
+# 锁定实际安装版本（本机 Python 3.11.15，uv venv）
+fastapi==0.163.1
+uvicorn[standard]==0.54.0
+pydantic==2.14.3
+openai==3.52.0
+openpyxl==3.1.5
+python-dotenv==1.2.4

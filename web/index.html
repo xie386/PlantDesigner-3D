@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PlantDesigner 3D · 一句话产线设计师</title>
+<link rel="stylesheet" href="/web/style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "/web/lib/three/three.module.js",
+    "three/addons/": "/web/lib/three/addons/"
+  }
+}
+</script>
+</head>
+<body>
+<script>
+  // 全局错误捕获：任何脚本异常都打到顶部状态栏，现场排查不用翻控制台
+  window.__errs = [];
+  function pdFail(msg) {
+    window.__errs.push(msg);
+    const s = document.getElementById('status');
+    if (s) { s.textContent = '异常：' + msg; s.classList.add('error'); }
+    console.error('[PD]', msg);
+  }
+  window.addEventListener('error', (e) => {
+    const where = e.filename ? ' @' + e.filename.split('/').pop() + ':' + e.lineno : '';
+    pdFail((e.message || 'unknown') + where);
+  });
+  window.addEventListener('unhandledrejection', (e) => {
+    pdFail('promise: ' + (e.reason && e.reason.message ? e.reason.message : e.reason));
+  });
+</script>
+<div id="app">
+  <header id="topbar">
+    <div class="brand">
+      <span class="logo">PD</span>
+      <div>
+        <h1>PlantDesigner 3D</h1>
+        <p>一句话生成可交互三维破碎筛分产线</p>
+      </div>
+    </div>
+    <div class="status" id="status">就绪</div>
+  </header>
+
+  <aside id="left">
+    <label class="field-label" for="prompt">客户需求（可直接粘贴原话）</label>
+    <textarea id="prompt" spellcheck="false">我这条砂石线原设计时产 300 吨，现在实际只能出 230 左右。颚破是 900×1200，二段单缸圆锥 1650，两台 2.4×6 圆振筛，还有一台轮斗洗砂。料是石灰岩，成品主要出 0-5、5-10、10-25、25-31.5。现在 0-5 的粉特别多，压价卖，电费也高，一天开 10 小时。想提到 350 吨，能花多少钱？</textarea>
+
+    <div class="row">
+      <button id="generate" class="primary">生成三维方案</button>
+      <button id="reset" class="ghost">重置</button>
+    </div>
+
+    <div class="progress" id="progress">
+      <div class="step idle">等待点击「生成三维方案」</div>
+    </div>
+
+    <div class="agent">
+      <label class="field-label" for="command">对方案下指令（Agent 自己改设备、重算、再改）</label>
+      <div class="cmd-row">
+        <input id="command" type="text" spellcheck="false" placeholder="例：二段圆锥换大一号，筛子再加一台" />
+        <button id="run-agent" class="primary small">执行</button>
+      </div>
+      <div class="cmd-row">
+        <button id="undo" class="ghost small">撤销上一步</button>
+        <span id="diff" class="diff">还没有改动</span>
+      </div>
+      <div id="agent-log" class="agent-log"></div>
+    </div>
+
+    <div class="hint">
+      <p><b>演示提示</b></p>
+      <p>左键旋转 / 滚轮缩放 / 右键平移；点击任意设备看参数与负荷。</p>
+      <p>「改造后」会把新增或更换的设备标成绿色。</p>
+    </div>
+
+    <div class="history">
+      <div class="hist-head">历史记录 <span id="hist-count"></span></div>
+      <div id="history-list" class="hist-list"><p class="muted">加载中…</p></div>
+    </div>
+  </aside>
+
+  <main id="stage">
+    <div id="view"></div>
+    <div id="labels"></div>
+    <div id="empty-hint">
+      <p class="big">左侧写一句话，点「生成三维方案」</p>
+      <p>系统会解析需求 → 选型 → 算产能平衡 → 摆出三维产线</p>
+    </div>
+    <div id="variants">
+      <button class="tab active" data-variant="before">现状</button>
+      <button class="tab" data-variant="after">改造后</button>
+    </div>
+    <div id="viewport-badge">全景视角</div>
+    <div id="legend">
+      <span class="dot crush"></span>破碎
+      <span class="dot screen"></span>筛分
+      <span class="dot belt"></span>输送
+      <span class="dot over"></span>过载
+      <span class="dot new"></span>新增/更换
+    </div>
+  </main>
+
+  <aside id="right">
+    <div id="metrics" class="metrics"></div>
+    <h2>设备参数</h2>
+    <div id="inspector"><p class="muted">点击三维场景中的设备查看参数与负荷。</p></div>
+  </aside>
+</div>
+<script type="module" src="/web/main.js"></script>
+</body>
+</html>

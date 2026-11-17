@@ -1,0 +1,155 @@
+{
+  "_meta": {
+    "version": "0.1",
+    "note": "示例设备库：参数按公开样本与行业常见区间整理，用于 demo 演示；生产使用需替换为贵司样本库。",
+    "provenance": "sample",
+    "units": {"dims": "mm (L,W,H)", "capacity": "t/h", "power": "kW", "price": "CNY", "mass": "t"}
+  },
+  "equipment": [
+    {
+      "id": "FD_ZSW380x96", "type": "feeder", "stage": "feed", "model": "ZSW-380×96",
+      "feed_max_mm": 500, "capacity_tph": [80, 150], "power_kw": 11,
+      "dims_mm": [4000, 2000, 1500], "mass_t": 6.2, "price_cny": 120000,
+      "geometry": {"kind": "feeder", "trough_deg": 0, "bar_gap_mm": 100}
+    },
+    {
+      "id": "FD_ZSW490x110", "type": "feeder", "stage": "feed", "model": "ZSW-490×110",
+      "feed_max_mm": 600, "capacity_tph": [120, 280], "power_kw": 15,
+      "dims_mm": [5000, 2200, 1600], "mass_t": 8.1, "price_cny": 160000,
+      "geometry": {"kind": "feeder", "trough_deg": 0, "bar_gap_mm": 120}
+    },
+    {
+      "id": "JC_PE600x900", "type": "jaw_crusher", "stage": "primary", "model": "PE600×900",
+      "feed_max_mm": 500, "css_range_mm": [65, 160],
+      "capacity_tph": [[65, 60], [100, 110], [160, 160]],
+      "power_kw": 75, "dims_mm": [2800, 2500, 2600], "mass_t": 16.0, "price_cny": 280000,
+      "geometry": {"kind": "jaw_frame", "wheels": 2, "hopper": true}
+    },
+    {
+      "id": "JC_PE750x1060", "type": "jaw_crusher", "stage": "primary", "model": "PE750×1060",
+      "feed_max_mm": 630, "css_range_mm": [80, 140],
+      "capacity_tph": [[80, 110], [110, 220], [140, 320]],
+      "power_kw": 110, "dims_mm": [3300, 2900, 2900], "mass_t": 28.0, "price_cny": 450000,
+      "geometry": {"kind": "jaw_frame", "wheels": 2, "hopper": true}
+    },
+    {
+      "id": "JC_PE900x1200", "type": "jaw_crusher", "stage": "primary", "model": "PE900×1200",
+      "feed_max_mm": 750, "css_range_mm": [95, 165],
+      "capacity_tph": [[95, 220], [130, 330], [165, 450]],
+      "power_kw": 132, "dims_mm": [3800, 3200, 3300], "mass_t": 52.0, "price_cny": 780000,
+      "geometry": {"kind": "jaw_frame", "wheels": 2, "hopper": true}
+    },
+    {
+      "id": "CC_SG1650", "type": "cone_single", "stage": "secondary", "model": "单缸圆锥 SC1650",
+      "feed_max_mm": 300, "css_range_mm": [8, 45],
+      "capacity_tph": [[8, 200], [20, 380], [45, 580]],
+      "power_kw": 250, "dims_mm": [4500, 3000, 4000], "mass_t": 24.0, "price_cny": 1200000,
+      "geometry": {"kind": "cone_crusher", "bowl": true}
+    },
+    {
+      "id": "CC_MC1400", "type": "cone_multi", "stage": "secondary", "model": "多缸圆锥 MC1400",
+      "feed_max_mm": 240, "css_range_mm": [6, 38],
+      "capacity_tph": [[6, 90], [16, 210], [38, 380]],
+      "power_kw": 220, "dims_mm": [4200, 2800, 3900], "mass_t": 22.0, "price_cny": 980000,
+      "geometry": {"kind": "cone_crusher", "bowl": true}
+    },
+    {
+      "id": "CC_SH1300", "type": "cone_shorthead", "stage": "tertiary", "model": "短头圆锥 SH1300",
+      "feed_max_mm": 180, "css_range_mm": [5, 25],
+      "capacity_tph": [[5, 55], [10, 130], [25, 220]],
+      "power_kw": 160, "dims_mm": [3800, 2600, 3600], "mass_t": 18.0, "price_cny": 720000,
+      "geometry": {"kind": "cone_crusher", "bowl": true}
+    },
+    {
+      "id": "IC_PF1214", "type": "impact_crusher", "stage": "secondary", "model": "PF-1214",
+      "feed_max_mm": 350, "css_range_mm": [20, 60],
+      "capacity_tph": [[20, 100], [40, 140], [60, 180]],
+      "power_kw": 132, "dims_mm": [3000, 2700, 2600], "mass_t": 18.0, "price_cny": 320000,
+      "geometry": {"kind": "impact_crusher"}
+    },
+    {
+      "id": "IC_PF1315", "type": "impact_crusher", "stage": "secondary", "model": "PF-1315",
+      "feed_max_mm": 500, "css_range_mm": [25, 70],
+      "capacity_tph": [[25, 160], [45, 220], [70, 280]],
+      "power_kw": 180, "dims_mm": [3300, 2900, 2900], "mass_t": 24.0, "price_cny": 480000,
+      "geometry": {"kind": "impact_crusher"}
+    },
+    {
+      "id": "VS_7611", "type": "vsi", "stage": "shaping", "model": "VSI-7611（制砂）",
+      "feed_max_mm": 50, "css_range_mm": [0, 0],
+      "capacity_tph": [[5, 60], [10, 90], [15, 120]],
+      "power_kw": 220, "dims_mm": [3700, 2200, 2800], "mass_t": 12.0, "price_cny": 460000,
+      "geometry": {"kind": "vsi", "rotor": true}
+    },
+    {
+      "id": "VS_9526", "type": "vsi", "stage": "shaping", "model": "VSI-9526（整形）",
+      "feed_max_mm": 60, "css_range_mm": [0, 0],
+      "capacity_tph": [[10, 120], [20, 190], [30, 260]],
+      "power_kw": 400, "dims_mm": [4200, 2600, 3200], "mass_t": 17.0, "price_cny": 680000,
+      "geometry": {"kind": "vsi", "rotor": true}
+    },
+    {
+      "id": "SC_2YK2160", "type": "screen", "stage": "screening", "model": "2YK2160",
+      "decks": 2, "area_m2": 12.6, "mesh_mm": [25, 10],
+      "capacity_tph": [100, 250], "power_kw": 30,
+      "dims_mm": [6300, 2600, 2500], "mass_t": 9.0, "price_cny": 180000,
+      "geometry": {"kind": "screen_deck", "incline_deg": 18}
+    },
+    {
+      "id": "SC_3YK2160", "type": "screen", "stage": "screening", "model": "3YK2160",
+      "decks": 3, "area_m2": 12.6, "mesh_mm": [31.5, 25, 10],
+      "capacity_tph": [150, 320], "power_kw": 37,
+      "dims_mm": [6300, 2600, 2900], "mass_t": 11.0, "price_cny": 220000,
+      "geometry": {"kind": "screen_deck", "incline_deg": 18}
+    },
+    {
+      "id": "SC_2YK2460", "type": "screen", "stage": "screening", "model": "2YK2460",
+      "decks": 2, "area_m2": 14.4, "mesh_mm": [25, 10],
+      "capacity_tph": [120, 300], "power_kw": 37,
+      "dims_mm": [7000, 2900, 2600], "mass_t": 11.0, "price_cny": 230000,
+      "geometry": {"kind": "screen_deck", "incline_deg": 18}
+    },
+    {
+      "id": "SC_3YK2460", "type": "screen", "stage": "screening", "model": "3YK2460",
+      "decks": 3, "area_m2": 14.4, "mesh_mm": [31.5, 25, 10],
+      "capacity_tph": [180, 380], "power_kw": 45,
+      "dims_mm": [7000, 2900, 3000], "mass_t": 13.0, "price_cny": 280000,
+      "geometry": {"kind": "screen_deck", "incline_deg": 18}
+    },
+    {
+      "id": "WS_XSD3620", "type": "washer_wheel", "stage": "washing", "model": "XSD-3620 轮斗洗砂机",
+      "capacity_tph": [100, 180], "power_kw": 15,
+      "dims_mm": [4000, 3000, 2800], "mass_t": 9.0, "price_cny": 150000,
+      "geometry": {"kind": "washer_wheel"}
+    },
+    {
+      "id": "WS_XL914", "type": "washer_screw", "stage": "washing", "model": "XL-914 螺旋洗砂机",
+      "capacity_tph": [80, 150], "power_kw": 11,
+      "dims_mm": [8500, 1800, 2200], "mass_t": 11.0, "price_cny": 160000,
+      "geometry": {"kind": "washer_screw"}
+    },
+    {
+      "id": "FD_ZSW600x130", "type": "feeder", "stage": "feed", "model": "ZSW-600×130",
+      "feed_max_mm": 700, "capacity_tph": [200, 420], "power_kw": 22,
+      "dims_mm": [6000, 2600, 1800], "mass_t": 11.5, "price_cny": 230000,
+      "geometry": {"kind": "feeder", "trough_deg": 0, "bar_gap_mm": 130}
+    },
+    {
+      "id": "JC_PE1200x1500", "type": "jaw_crusher", "stage": "primary", "model": "PE1200×1500",
+      "feed_max_mm": 1020, "css_range_mm": [150, 300],
+      "capacity_tph": [[150, 400], [200, 560], [300, 800]],
+      "power_kw": 200, "dims_mm": [4600, 3800, 3900], "mass_t": 81.0, "price_cny": 1350000,
+      "geometry": {"kind": "jaw_frame", "wheels": 2, "hopper": true}
+    },
+    {
+      "id": "ST_1000", "type": "silo", "stage": "stock", "model": "成品仓 1000t",
+      "capacity_t": 1000, "dims_mm": [8000, 8000, 14000], "mass_t": 45.0, "price_cny": 600000,
+      "geometry": {"kind": "silo"}
+    },
+    {
+      "id": "RM_CTRL", "type": "control_room", "stage": "aux", "model": "控制室 6×3",
+      "dims_mm": [6000, 3000, 3000], "mass_t": 8.0, "price_cny": 80000,
+      "geometry": {"kind": "box_room"}
+    }
+  ]
+}
