@@ -68,11 +68,16 @@ def _client():
     key = os.getenv("DEEPSEEK_API_KEY", "").strip()
     if not key or not key.startswith("sk-"):
         return None
+    # 关键：清掉代理环境变量。api.deepseek.com 直连可达；若走系统代理，
+    # 代理节点对 deepseek 的 TLS 握手会间歇性被掐（SSLEOFError → 请求超时）。
+    # openai SDK 底层 httpx 读大写 HTTP(S)_PROXY，环境里 NO_PROXY 覆盖不全时会绕道代理。
+    for k in ("HTTP_PROXY", "HTTPS_PROXY", "ALL_PROXY", "http_proxy", "https_proxy", "all_proxy"):
+        os.environ.pop(k, None)
     return OpenAI(
         api_key=key,
         base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com"),
-        timeout=30.0,
-        max_retries=1,
+        timeout=45.0,
+        max_retries=2,
     )
 
 

@@ -136,11 +136,14 @@ def _client():
     key = os.getenv("DEEPSEEK_API_KEY", "").strip()
     if not key or not key.startswith("sk-"):
         return None
+    # 与 llm.py 同因：代理节点会间歇掐断 deepseek 的 TLS，必须直连
+    for k in ("HTTP_PROXY", "HTTPS_PROXY", "ALL_PROXY", "http_proxy", "https_proxy", "all_proxy"):
+        os.environ.pop(k, None)
     return OpenAI(
         api_key=key,
         base_url=os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com"),
         timeout=60.0,
-        max_retries=1,
+        max_retries=2,
     )
 
 

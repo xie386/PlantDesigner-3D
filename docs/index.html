@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PlantDesigner 3D · 产线方案在线演示</title>
+<link rel="stylesheet" href="./web/style.css" />
+<script type="importmap">
+{"imports": {"three": "./web/lib/three/three.module.js", "three/addons/": "./web/lib/three/addons/"}}
+</script>
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div class="brand">
+      <span class="logo">PD</span>
+      <div>
+        <h1>PlantDesigner 3D</h1>
+        <p>矿山破碎筛分产线 · 三维方案演示（静态版）</p>
+      </div>
+    </div>
+    <div class="status" id="status">点击左侧案例开始</div>
+  </header>
+
+  <aside id="left">
+    <div class="hist-head">案例（真实运行结果）</div>
+    <div id="case-list" class="hist-list"></div>
+    <div class="hint">
+      <p><b>这是什么</b></p>
+      <p>三个案例都是求解器真实算出来的：设备选型、产能平衡、循环负荷、投资回收期。</p>
+      <p>左键旋转 / 滚轮缩放 / 右键平移 / 点击设备看参数。</p>
+      <p class="muted">本页为静态版：场景数据在浏览器本地渲染，不调用任何模型。
+      要输入自己的需求，请本地运行仓库里的服务。</p>
+    </div>
+  </aside>
+
+  <main id="stage">
+    <div id="view"></div>
+    <div id="labels"></div>
+    <div id="variants">
+      <button class="tab active" data-variant="before">现状</button>
+      <button class="tab" data-variant="after">改造后</button>
+    </div>
+    <div id="legend">
+      <span class="dot crush"></span>破碎
+      <span class="dot screen"></span>筛分
+      <span class="dot belt"></span>输送
+      <span class="dot over"></span>过载
+      <span class="dot new"></span>新增/更换
+    </div>
+  </main>
+
+  <aside id="right">
+    <div id="metrics" class="metrics"></div>
+    <h2>方案结论</h2>
+    <div id="inspector"><p class="muted">选择左侧案例，或点击三维场景中的设备。</p></div>
+  </aside>
+</div>
+<script type="module" src="./web/app.js"></script>
+</body>
+</html>

@@ -75,7 +75,8 @@ def build_retrofit(base_devices: list[dict], target_tph: float, ctx: dict | None
     added_price = 0.0
 
     for node in staged["nodes"]:
-        if node["utilization"] <= 0.95:
+        if node["utilization"] <= 1.0:
+            # 只有真过载才动设备；接近满负荷（0.9–1.0）写进判断依据，不花这笔钱
             continue
         role = node["role"]
         idx = next(i for i, d in enumerate(target_devices) if d["role"] == role)

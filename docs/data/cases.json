@@ -1,0 +1,2196 @@
+{
+ "cases": [
+  {
+   "id": "zhang-limestone",
+   "name": "张总石灰岩线",
+   "subtitle": "现状 230 t/h → 目标 350 t/h",
+   "requirements": {
+    "material": "石灰岩",
+    "hardness": "soft",
+    "design_tph": 300,
+    "current_tph": 230,
+    "target_tph": 350,
+    "products": [
+     "0-5",
+     "5-10",
+     "10-25",
+     "25-31.5"
+    ],
+    "symptoms": [
+     "0-5 粉多",
+     "电费高",
+     "产能不足"
+    ],
+    "site": {
+     "w": 90,
+     "d": 45
+    },
+    "shift_hours": 10,
+    "price_cny_per_t": 55,
+    "existing": [
+     {
+      "role": "feed",
+      "eq_id": "FD_ZSW490x110",
+      "count": 1
+     },
+     {
+      "role": "primary",
+      "eq_id": "JC_PE900x1200",
+      "css_mm": 130,
+      "count": 1
+     },
+     {
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "css_mm": 20,
+      "count": 1
+     },
+     {
+      "role": "screening",
+      "eq_id": "SC_2YK2160",
+      "mesh_mm": [
+       25,
+       10
+      ],
+      "count": 2
+     },
+     {
+      "role": "washing",
+      "eq_id": "WS_XSD3620",
+      "count": 1
+     }
+    ]
+   },
+   "before": {
+    "variant": "before",
+    "site": {
+     "w": 90,
+     "d": 45
+    },
+    "nodes": [
+     {
+      "id": "n1",
+      "role": "feed",
+      "eq_id": "FD_ZSW490x110",
+      "model": "ZSW-490×110",
+      "stage": "feed",
+      "pos": [
+       -39.0,
+       0.6,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       5.0,
+       1.6,
+       2.2
+      ],
+      "footprint": [
+       5.0,
+       2.2
+      ],
+      "count_index": 0,
+      "load": 0.821,
+      "flow_tph": 230.0,
+      "capacity_tph": 280.0,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 12.3,
+      "label": "ZSW-490×110"
+     },
+     {
+      "id": "n2",
+      "role": "primary",
+      "eq_id": "JC_PE900x1200",
+      "model": "PE900×1200",
+      "stage": "primary",
+      "pos": [
+       -28.0,
+       0.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       3.8,
+       3.3,
+       3.2
+      ],
+      "footprint": [
+       3.8,
+       3.2
+      ],
+      "count_index": 0,
+      "load": 0.697,
+      "flow_tph": 230.0,
+      "capacity_tph": 330.0,
+      "flag": "ok",
+      "css_mm": 130,
+      "power_kw": 92.0,
+      "label": "PE900×1200"
+     },
+     {
+      "id": "n3",
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "model": "单缸圆锥 SC1650",
+      "stage": "secondary",
+      "pos": [
+       -13.63,
+       3.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.5,
+       4.0,
+       3.0
+      ],
+      "footprint": [
+       4.5,
+       3.0
+      ],
+      "count_index": 0,
+      "load": 0.841,
+      "flow_tph": 319.4,
+      "capacity_tph": 380.0,
+      "flag": "ok",
+      "css_mm": 20,
+      "power_kw": 210.2,
+      "label": "单缸圆锥 SC1650"
+     },
+     {
+      "id": "n4",
+      "role": "screening",
+      "eq_id": "SC_2YK2160",
+      "model": "2YK2160",
+      "stage": "screening",
+      "pos": [
+       3.39,
+       8.0,
+       -2.8
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       6.3,
+       2.5,
+       2.6
+      ],
+      "footprint": [
+       6.3,
+       2.6
+      ],
+      "count_index": 0,
+      "load": 0.639,
+      "flow_tph": 319.4,
+      "capacity_tph": 500.0,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 38.3,
+      "label": "2YK2160 ×2"
+     },
+     {
+      "id": "n5",
+      "role": "screening",
+      "eq_id": "SC_2YK2160",
+      "model": "2YK2160",
+      "stage": "screening",
+      "pos": [
+       3.39,
+       8.0,
+       2.8
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       6.3,
+       2.5,
+       2.6
+      ],
+      "footprint": [
+       6.3,
+       2.6
+      ],
+      "count_index": 1,
+      "load": 0.639,
+      "flow_tph": 319.4,
+      "capacity_tph": 500.0,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 38.3,
+      "label": "2YK2160 ×2"
+     },
+     {
+      "id": "n6",
+      "role": "washing",
+      "eq_id": "WS_XSD3620",
+      "model": "XSD-3620 轮斗洗砂机",
+      "stage": "washing",
+      "pos": [
+       15.69,
+       1.2,
+       8.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.0,
+       2.8,
+       3.0
+      ],
+      "footprint": [
+       4.0,
+       3.0
+      ],
+      "count_index": 0,
+      "load": 0.447,
+      "flow_tph": 80.5,
+      "capacity_tph": 180.0,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 6.7,
+      "label": "XSD-3620 轮斗洗砂机"
+     }
+    ],
+    "belts": [
+     {
+      "from_id": "n1",
+      "to_id": "n2",
+      "p1": [
+       -36.5,
+       1.75,
+       0.0
+      ],
+      "p2": [
+       -29.9,
+       2.05,
+       0.0
+      ],
+      "length": 6.61,
+      "slope_deg": 2.6,
+      "ok": true
+     },
+     {
+      "from_id": "n2",
+      "to_id": "n3",
+      "p1": [
+       -26.1,
+       2.38,
+       0.0
+      ],
+      "p2": [
+       -15.88,
+       5.48,
+       0.0
+      ],
+      "length": 10.68,
+      "slope_deg": 16.9,
+      "ok": true
+     },
+     {
+      "from_id": "n3",
+      "to_id": "n4",
+      "p1": [
+       -11.38,
+       5.88,
+       0.0
+      ],
+      "p2": [
+       0.24,
+       9.55,
+       -2.8
+      ],
+      "length": 12.5,
+      "slope_deg": 17.1,
+      "ok": true
+     },
+     {
+      "from_id": "n4",
+      "to_id": "n5",
+      "p1": [
+       6.54,
+       9.8,
+       -2.8
+      ],
+      "p2": [
+       0.24,
+       9.55,
+       2.8
+      ],
+      "length": 8.43,
+      "slope_deg": -1.7,
+      "ok": true
+     },
+     {
+      "from_id": "n5",
+      "to_id": "n6",
+      "p1": [
+       6.54,
+       9.8,
+       2.8
+      ],
+      "p2": [
+       13.69,
+       2.94,
+       8.0
+      ],
+      "length": 11.19,
+      "slope_deg": -37.8,
+      "ok": true
+     }
+    ],
+    "notes": [
+     "循环负荷 0.39，处于经验区间内。",
+     "二段与筛分的通过量是 319 t/h（成品 230 ÷ 通过率 0.72），不是 230。"
+    ],
+    "metrics": {
+     "throughput_tph": 230.0,
+     "circulating_load": 0.39,
+     "pass_fraction": 0.72,
+     "ton_power_kwh": 1.56,
+     "unit_cost_cny_t": 30.08,
+     "max_utilization": 0.841
+    },
+    "camera": {
+     "target": [
+      -11.9,
+      5.25,
+      2.7
+     ],
+     "distance": 62.8,
+     "pos": [
+      -48.3,
+      37.9,
+      45.4
+     ]
+    }
+   },
+   "after": {
+    "variant": "after",
+    "site": {
+     "w": 90,
+     "d": 45
+    },
+    "nodes": [
+     {
+      "id": "n1",
+      "role": "feed",
+      "eq_id": "FD_ZSW600x130",
+      "model": "ZSW-600×130",
+      "stage": "feed",
+      "pos": [
+       -39.0,
+       0.6,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       6.0,
+       1.8,
+       2.6
+      ],
+      "footprint": [
+       6.0,
+       2.6
+      ],
+      "count_index": 0,
+      "load": 0.833,
+      "flow_tph": 350.0,
+      "capacity_tph": 420.0,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 18.3,
+      "label": "ZSW-600×130",
+      "isNew": true
+     },
+     {
+      "id": "n2",
+      "role": "primary",
+      "eq_id": "JC_PE1200x1500",
+      "model": "PE1200×1500",
+      "stage": "primary",
+      "pos": [
+       -27.0,
+       0.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.6,
+       3.9,
+       3.8
+      ],
+      "footprint": [
+       4.6,
+       3.8
+      ],
+      "count_index": 0,
+      "load": 0.875,
+      "flow_tph": 350.0,
+      "capacity_tph": 400.0,
+      "flag": "ok",
+      "css_mm": 150,
+      "power_kw": 175.0,
+      "label": "PE1200×1500",
+      "isNew": true
+     },
+     {
+      "id": "n3",
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "model": "单缸圆锥 SC1650",
+      "stage": "secondary",
+      "pos": [
+       -12.98,
+       3.0,
+       -3.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.5,
+       4.0,
+       3.0
+      ],
+      "footprint": [
+       4.5,
+       3.0
+      ],
+      "count_index": 0,
+      "load": 0.64,
+      "flow_tph": 486.1,
+      "capacity_tph": 760.0,
+      "flag": "ok",
+      "css_mm": 20,
+      "power_kw": 320.0,
+      "label": "单缸圆锥 SC1650 ×2",
+      "isNew": false
+     },
+     {
+      "id": "n4",
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "model": "单缸圆锥 SC1650",
+      "stage": "secondary",
+      "pos": [
+       -12.98,
+       3.0,
+       3.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.5,
+       4.0,
+       3.0
+      ],
+      "footprint": [
+       4.5,
+       3.0
+      ],
+      "count_index": 1,
+      "load": 0.64,
+      "flow_tph": 486.1,
+      "capacity_tph": 760.0,
+      "flag": "ok",
+      "css_mm": 20,
+      "power_kw": 320.0,
+      "label": "单缸圆锥 SC1650 ×2",
+      "isNew": false
+     },
+     {
+      "id": "n5",
+      "role": "screening",
+      "eq_id": "SC_2YK2160",
+      "model": "2YK2160",
+      "stage": "screening",
+      "pos": [
+       4.05,
+       8.0,
+       -2.8
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       6.3,
+       2.5,
+       2.6
+      ],
+      "footprint": [
+       6.3,
+       2.6
+      ],
+      "count_index": 0,
+      "load": 0.972,
+      "flow_tph": 486.1,
+      "capacity_tph": 500.0,
+      "flag": "near",
+      "css_mm": null,
+      "power_kw": 58.3,
+      "label": "2YK2160 ×2",
+      "isNew": false
+     },
+     {
+      "id": "n6",
+      "role": "screening",
+      "eq_id": "SC_2YK2160",
+      "model": "2YK2160",
+      "stage": "screening",
+      "pos": [
+       4.05,
+       8.0,
+       2.8
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       6.3,
+       2.5,
+       2.6
+      ],
+      "footprint": [
+       6.3,
+       2.6
+      ],
+      "count_index": 1,
+      "load": 0.972,
+      "flow_tph": 486.1,
+      "capacity_tph": 500.0,
+      "flag": "near",
+      "css_mm": null,
+      "power_kw": 58.3,
+      "label": "2YK2160 ×2",
+      "isNew": false
+     },
+     {
+      "id": "n7",
+      "role": "washing",
+      "eq_id": "WS_XSD3620",
+      "model": "XSD-3620 轮斗洗砂机",
+      "stage": "washing",
+      "pos": [
+       16.35,
+       1.2,
+       8.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.0,
+       2.8,
+       3.0
+      ],
+      "footprint": [
+       4.0,
+       3.0
+      ],
+      "count_index": 0,
+      "load": 0.681,
+      "flow_tph": 122.5,
+      "capacity_tph": 180.0,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 10.2,
+      "label": "XSD-3620 轮斗洗砂机",
+      "isNew": false
+     }
+    ],
+    "belts": [
+     {
+      "from_id": "n1",
+      "to_id": "n2",
+      "p1": [
+       -36.0,
+       1.9,
+       0.0
+      ],
+      "p2": [
+       -29.3,
+       2.42,
+       0.0
+      ],
+      "length": 6.72,
+      "slope_deg": 4.5,
+      "ok": true
+     },
+     {
+      "from_id": "n2",
+      "to_id": "n3",
+      "p1": [
+       -24.7,
+       2.81,
+       0.0
+      ],
+      "p2": [
+       -15.23,
+       5.48,
+       -3.0
+      ],
+      "length": 10.29,
+      "slope_deg": 15.1,
+      "ok": true
+     },
+     {
+      "from_id": "n3",
+      "to_id": "n4",
+      "p1": [
+       -10.73,
+       5.88,
+       -3.0
+      ],
+      "p2": [
+       -15.23,
+       5.48,
+       3.0
+      ],
+      "length": 7.51,
+      "slope_deg": -3.1,
+      "ok": true
+     },
+     {
+      "from_id": "n4",
+      "to_id": "n5",
+      "p1": [
+       -10.73,
+       5.88,
+       3.0
+      ],
+      "p2": [
+       0.9,
+       9.55,
+       -2.8
+      ],
+      "length": 13.5,
+      "slope_deg": 15.8,
+      "ok": true
+     },
+     {
+      "from_id": "n5",
+      "to_id": "n6",
+      "p1": [
+       7.2,
+       9.8,
+       -2.8
+      ],
+      "p2": [
+       0.9,
+       9.55,
+       2.8
+      ],
+      "length": 8.43,
+      "slope_deg": -1.7,
+      "ok": true
+     },
+     {
+      "from_id": "n6",
+      "to_id": "n7",
+      "p1": [
+       7.2,
+       9.8,
+       2.8
+      ],
+      "p2": [
+       14.35,
+       2.94,
+       8.0
+      ],
+      "length": 11.19,
+      "slope_deg": -37.8,
+      "ok": true
+     }
+    ],
+    "notes": [
+     "循环负荷 0.39，处于经验区间内。",
+     "接近满负荷：2YK2160，没有余量，产量再往上必先动它。",
+     "二段与筛分的通过量是 486 t/h（成品 350 ÷ 通过率 0.72），不是 350。"
+    ],
+    "metrics": {
+     "throughput_tph": 350.0,
+     "circulating_load": 0.39,
+     "pass_fraction": 0.72,
+     "ton_power_kwh": 1.66,
+     "unit_cost_cny_t": 29.95,
+     "max_utilization": 0.972
+    },
+    "camera": {
+     "target": [
+      -11.82,
+      5.25,
+      2.5
+     ],
+     "distance": 64.0,
+     "pos": [
+      -49.0,
+      38.6,
+      46.0
+     ]
+    }
+   },
+   "economics": {
+    "delta_tph": 120.0,
+    "monthly_gain_cny": 788918,
+    "equipment_cny": 2780000,
+    "install_cny": 2502000,
+    "downtime_cny": 175881,
+    "investment_cny": 5457881,
+    "payback_months": 6.9,
+    "annual_gain_cny": 9467016,
+    "ton_power_delta": 0.1,
+    "margin_cny_t": 25.4,
+    "downtime_days": 3
+   },
+   "retrofit": [
+    {
+     "role": "feed",
+     "action": "replace",
+     "eq_id": "FD_ZSW600x130",
+     "model": "ZSW-600×130",
+     "from_model": "ZSW-490×110",
+     "count": 1,
+     "price_cny": 230000,
+     "reason": "ZSW-490×110 负荷 125%，换 ZSW-600×130 才能覆盖"
+    },
+    {
+     "role": "primary",
+     "action": "replace",
+     "eq_id": "JC_PE1200x1500",
+     "model": "PE1200×1500",
+     "from_model": "PE900×1200",
+     "count": 1,
+     "price_cny": 1350000,
+     "reason": "PE900×1200 负荷 106%，换 PE1200×1500 才能覆盖"
+    },
+    {
+     "role": "secondary",
+     "action": "add",
+     "eq_id": "CC_SG1650",
+     "model": "单缸圆锥 SC1650",
+     "count_add": 1,
+     "price_cny": 1200000,
+     "reason": "单缸圆锥 SC1650 在 350 t/h 时负荷 128%，加一台同型号最省"
+    }
+   ],
+   "notes": [
+    "循环负荷 0.39，处于经验区间内。",
+    "二段与筛分的通过量是 319 t/h（成品 230 ÷ 通过率 0.72），不是 230。",
+    "改造要点：ZSW-600×130（replace）；PE1200×1500（replace）；单缸圆锥 SC1650（add）",
+    "改造总投约 546 万元，月增现金流 78.9 万元，静态回收期约 6.9 个月。"
+   ]
+  },
+  {
+   "id": "river-pebble-200",
+   "name": "河卵石新建线",
+   "subtitle": "零信息输入，自动选型 200 t/h",
+   "requirements": {
+    "material": "河卵石",
+    "hardness": "hard",
+    "design_tph": null,
+    "current_tph": 150,
+    "target_tph": 200,
+    "products": [
+     "0-5",
+     "5-10",
+     "10-20"
+    ],
+    "symptoms": [
+     "新建线",
+     "无现成设备"
+    ],
+    "site": {
+     "w": 60,
+     "d": 30
+    },
+    "shift_hours": 10,
+    "price_cny_per_t": 62,
+    "existing": []
+   },
+   "before": {
+    "variant": "before",
+    "site": {
+     "w": 85.3,
+     "d": 30
+    },
+    "nodes": [
+     {
+      "id": "n1",
+      "role": "feed",
+      "eq_id": "FD_ZSW600x130",
+      "model": "ZSW-600×130",
+      "stage": "feed",
+      "pos": [
+       -24.0,
+       0.6,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       6.0,
+       1.8,
+       2.6
+      ],
+      "footprint": [
+       6.0,
+       2.6
+      ],
+      "count_index": 0,
+      "load": 0.436,
+      "flow_tph": 150.0,
+      "capacity_tph": 344.4,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 9.6,
+      "label": "ZSW-600×130"
+     },
+     {
+      "id": "n2",
+      "role": "primary",
+      "eq_id": "JC_PE900x1200",
+      "model": "PE900×1200",
+      "stage": "primary",
+      "pos": [
+       -12.0,
+       0.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       3.8,
+       3.3,
+       3.2
+      ],
+      "footprint": [
+       3.8,
+       3.2
+      ],
+      "count_index": 0,
+      "load": 0.613,
+      "flow_tph": 150.0,
+      "capacity_tph": 244.9,
+      "flag": "ok",
+      "css_mm": 120.0,
+      "power_kw": 80.9,
+      "label": "PE900×1200"
+     },
+     {
+      "id": "n3",
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "model": "单缸圆锥 SC1650",
+      "stage": "secondary",
+      "pos": [
+       2.37,
+       3.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.5,
+       4.0,
+       3.0
+      ],
+      "footprint": [
+       4.5,
+       3.0
+      ],
+      "count_index": 0,
+      "load": 0.668,
+      "flow_tph": 208.3,
+      "capacity_tph": 311.6,
+      "flag": "ok",
+      "css_mm": 20,
+      "power_kw": 167.0,
+      "label": "单缸圆锥 SC1650"
+     },
+     {
+      "id": "n4",
+      "role": "screening",
+      "eq_id": "SC_3YK2460",
+      "model": "3YK2460",
+      "stage": "screening",
+      "pos": [
+       20.35,
+       8.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       7.0,
+       3.0,
+       2.9
+      ],
+      "footprint": [
+       7.0,
+       2.9
+      ],
+      "count_index": 0,
+      "load": 0.668,
+      "flow_tph": 208.3,
+      "capacity_tph": 311.6,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 30.1,
+      "label": "3YK2460"
+     },
+     {
+      "id": "n5",
+      "role": "washing",
+      "eq_id": "WS_XSD3620",
+      "model": "XSD-3620 轮斗洗砂机",
+      "stage": "washing",
+      "pos": [
+       33.35,
+       1.2,
+       8.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.0,
+       2.8,
+       3.0
+      ],
+      "footprint": [
+       4.0,
+       3.0
+      ],
+      "count_index": 0,
+      "load": 0.356,
+      "flow_tph": 52.5,
+      "capacity_tph": 147.6,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 5.3,
+      "label": "XSD-3620 轮斗洗砂机"
+     }
+    ],
+    "belts": [
+     {
+      "from_id": "n1",
+      "to_id": "n2",
+      "p1": [
+       -21.0,
+       1.9,
+       0.0
+      ],
+      "p2": [
+       -13.9,
+       2.05,
+       0.0
+      ],
+      "length": 7.1,
+      "slope_deg": 1.2,
+      "ok": true
+     },
+     {
+      "from_id": "n2",
+      "to_id": "n3",
+      "p1": [
+       -10.1,
+       2.38,
+       0.0
+      ],
+      "p2": [
+       0.12,
+       5.48,
+       0.0
+      ],
+      "length": 10.68,
+      "slope_deg": 16.9,
+      "ok": true
+     },
+     {
+      "from_id": "n3",
+      "to_id": "n4",
+      "p1": [
+       4.62,
+       5.88,
+       0.0
+      ],
+      "p2": [
+       16.85,
+       9.86,
+       0.0
+      ],
+      "length": 12.86,
+      "slope_deg": 18.0,
+      "ok": true
+     },
+     {
+      "from_id": "n4",
+      "to_id": "n5",
+      "p1": [
+       23.85,
+       10.16,
+       0.0
+      ],
+      "p2": [
+       31.35,
+       2.94,
+       8.0
+      ],
+      "length": 13.13,
+      "slope_deg": -33.4,
+      "ok": true
+     }
+    ],
+    "notes": [
+     "循环负荷 0.39，处于经验区间内。",
+     "二段与筛分的通过量是 208 t/h（成品 150 ÷ 通过率 0.72），不是 150。",
+     "按 6 m 最小间距排布后，线长约 67 m，超出原场地 30×… 的可用长度，场景已按实际长度展开。"
+    ],
+    "metrics": {
+     "throughput_tph": 150.0,
+     "circulating_load": 0.39,
+     "pass_fraction": 0.72,
+     "ton_power_kwh": 1.95,
+     "unit_cost_cny_t": 30.64,
+     "max_utilization": 0.668
+    },
+    "camera": {
+     "target": [
+      4.18,
+      5.5,
+      3.95
+     ],
+     "distance": 65.5,
+     "pos": [
+      -33.8,
+      39.6,
+      48.5
+     ]
+    }
+   },
+   "after": {
+    "variant": "after",
+    "site": {
+     "w": 85.3,
+     "d": 30
+    },
+    "nodes": [
+     {
+      "id": "n1",
+      "role": "feed",
+      "eq_id": "FD_ZSW600x130",
+      "model": "ZSW-600×130",
+      "stage": "feed",
+      "pos": [
+       -24.0,
+       0.6,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       6.0,
+       1.8,
+       2.6
+      ],
+      "footprint": [
+       6.0,
+       2.6
+      ],
+      "count_index": 0,
+      "load": 0.581,
+      "flow_tph": 200.0,
+      "capacity_tph": 344.4,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 12.8,
+      "label": "ZSW-600×130",
+      "isNew": false
+     },
+     {
+      "id": "n2",
+      "role": "primary",
+      "eq_id": "JC_PE900x1200",
+      "model": "PE900×1200",
+      "stage": "primary",
+      "pos": [
+       -12.0,
+       0.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       3.8,
+       3.3,
+       3.2
+      ],
+      "footprint": [
+       3.8,
+       3.2
+      ],
+      "count_index": 0,
+      "load": 0.817,
+      "flow_tph": 200.0,
+      "capacity_tph": 244.9,
+      "flag": "ok",
+      "css_mm": 120.0,
+      "power_kw": 107.8,
+      "label": "PE900×1200",
+      "isNew": false
+     },
+     {
+      "id": "n3",
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "model": "单缸圆锥 SC1650",
+      "stage": "secondary",
+      "pos": [
+       2.37,
+       3.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.5,
+       4.0,
+       3.0
+      ],
+      "footprint": [
+       4.5,
+       3.0
+      ],
+      "count_index": 0,
+      "load": 0.892,
+      "flow_tph": 277.8,
+      "capacity_tph": 311.6,
+      "flag": "ok",
+      "css_mm": 20,
+      "power_kw": 223.0,
+      "label": "单缸圆锥 SC1650",
+      "isNew": false
+     },
+     {
+      "id": "n4",
+      "role": "screening",
+      "eq_id": "SC_3YK2460",
+      "model": "3YK2460",
+      "stage": "screening",
+      "pos": [
+       20.35,
+       8.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       7.0,
+       3.0,
+       2.9
+      ],
+      "footprint": [
+       7.0,
+       2.9
+      ],
+      "count_index": 0,
+      "load": 0.892,
+      "flow_tph": 277.8,
+      "capacity_tph": 311.6,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 40.1,
+      "label": "3YK2460",
+      "isNew": false
+     },
+     {
+      "id": "n5",
+      "role": "washing",
+      "eq_id": "WS_XSD3620",
+      "model": "XSD-3620 轮斗洗砂机",
+      "stage": "washing",
+      "pos": [
+       33.35,
+       1.2,
+       8.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.0,
+       2.8,
+       3.0
+      ],
+      "footprint": [
+       4.0,
+       3.0
+      ],
+      "count_index": 0,
+      "load": 0.474,
+      "flow_tph": 70.0,
+      "capacity_tph": 147.6,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 7.1,
+      "label": "XSD-3620 轮斗洗砂机",
+      "isNew": false
+     }
+    ],
+    "belts": [
+     {
+      "from_id": "n1",
+      "to_id": "n2",
+      "p1": [
+       -21.0,
+       1.9,
+       0.0
+      ],
+      "p2": [
+       -13.9,
+       2.05,
+       0.0
+      ],
+      "length": 7.1,
+      "slope_deg": 1.2,
+      "ok": true
+     },
+     {
+      "from_id": "n2",
+      "to_id": "n3",
+      "p1": [
+       -10.1,
+       2.38,
+       0.0
+      ],
+      "p2": [
+       0.12,
+       5.48,
+       0.0
+      ],
+      "length": 10.68,
+      "slope_deg": 16.9,
+      "ok": true
+     },
+     {
+      "from_id": "n3",
+      "to_id": "n4",
+      "p1": [
+       4.62,
+       5.88,
+       0.0
+      ],
+      "p2": [
+       16.85,
+       9.86,
+       0.0
+      ],
+      "length": 12.86,
+      "slope_deg": 18.0,
+      "ok": true
+     },
+     {
+      "from_id": "n4",
+      "to_id": "n5",
+      "p1": [
+       23.85,
+       10.16,
+       0.0
+      ],
+      "p2": [
+       31.35,
+       2.94,
+       8.0
+      ],
+      "length": 13.13,
+      "slope_deg": -33.4,
+      "ok": true
+     }
+    ],
+    "notes": [
+     "循环负荷 0.39，处于经验区间内。",
+     "二段与筛分的通过量是 278 t/h（成品 200 ÷ 通过率 0.72），不是 200。",
+     "按 6 m 最小间距排布后，线长约 67 m，超出原场地 30×… 的可用长度，场景已按实际长度展开。"
+    ],
+    "metrics": {
+     "throughput_tph": 200.0,
+     "circulating_load": 0.39,
+     "pass_fraction": 0.72,
+     "ton_power_kwh": 1.95,
+     "unit_cost_cny_t": 30.42,
+     "max_utilization": 0.892
+    },
+    "camera": {
+     "target": [
+      4.18,
+      5.5,
+      3.95
+     ],
+     "distance": 65.5,
+     "pos": [
+      -33.8,
+      39.6,
+      48.5
+     ]
+    }
+   },
+   "economics": {
+    "delta_tph": 50.0,
+    "monthly_gain_cny": 418990,
+    "equipment_cny": 0,
+    "install_cny": 0,
+    "downtime_cny": 0,
+    "investment_cny": 0,
+    "payback_months": null,
+    "annual_gain_cny": 5027880,
+    "ton_power_delta": 0.0,
+    "margin_cny_t": 32.2,
+    "no_retrofit": true,
+    "downtime_days": 3
+   },
+   "retrofit": [],
+   "notes": [
+    "循环负荷 0.39，处于经验区间内。",
+    "硬度折减：按 hard 取 0.82，设备库标称能力已按此折减后再算负荷。",
+    "二段与筛分的通过量是 208 t/h（成品 150 ÷ 通过率 0.72），不是 150。",
+    "目标 200 t/h 下现有设备均有余量，不需要改造；若实测产量仍上不去，优先核对排料口、筛孔与给料均匀性。"
+   ]
+  },
+  {
+   "id": "big-line-500",
+   "name": "石灰岩大线扩产",
+   "subtitle": "现状 420 t/h → 目标 500 t/h",
+   "requirements": {
+    "material": "石灰岩",
+    "hardness": "medium",
+    "design_tph": 500,
+    "current_tph": 420,
+    "target_tph": 500,
+    "products": [
+     "0-5",
+     "5-10",
+     "10-25",
+     "25-31.5"
+    ],
+    "symptoms": [
+     "扩产"
+    ],
+    "site": {
+     "w": 110,
+     "d": 55
+    },
+    "shift_hours": 12,
+    "price_cny_per_t": 58,
+    "existing": [
+     {
+      "role": "feed",
+      "eq_id": "FD_ZSW600x130",
+      "count": 1
+     },
+     {
+      "role": "primary",
+      "eq_id": "JC_PE1200x1500",
+      "css_mm": 200,
+      "count": 1
+     },
+     {
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "css_mm": 25,
+      "count": 2
+     },
+     {
+      "role": "screening",
+      "eq_id": "SC_3YK2460",
+      "mesh_mm": [
+       25,
+       10
+      ],
+      "count": 2
+     }
+    ]
+   },
+   "before": {
+    "variant": "before",
+    "site": {
+     "w": 110,
+     "d": 55
+    },
+    "nodes": [
+     {
+      "id": "n1",
+      "role": "feed",
+      "eq_id": "FD_ZSW600x130",
+      "model": "ZSW-600×130",
+      "stage": "feed",
+      "pos": [
+       -49.0,
+       0.6,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       6.0,
+       1.8,
+       2.6
+      ],
+      "footprint": [
+       6.0,
+       2.6
+      ],
+      "count_index": 0,
+      "load": 1.087,
+      "flow_tph": 420.0,
+      "capacity_tph": 386.4,
+      "flag": "overload",
+      "css_mm": null,
+      "power_kw": 22.0,
+      "label": "ZSW-600×130"
+     },
+     {
+      "id": "n2",
+      "role": "primary",
+      "eq_id": "JC_PE1200x1500",
+      "model": "PE1200×1500",
+      "stage": "primary",
+      "pos": [
+       -37.0,
+       0.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.6,
+       3.9,
+       3.8
+      ],
+      "footprint": [
+       4.6,
+       3.8
+      ],
+      "count_index": 0,
+      "load": 0.815,
+      "flow_tph": 420.0,
+      "capacity_tph": 515.2,
+      "flag": "ok",
+      "css_mm": 200,
+      "power_kw": 163.0,
+      "label": "PE1200×1500"
+     },
+     {
+      "id": "n3",
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "model": "单缸圆锥 SC1650",
+      "stage": "secondary",
+      "pos": [
+       -22.98,
+       3.0,
+       -3.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.5,
+       4.0,
+       3.0
+      ],
+      "footprint": [
+       4.5,
+       3.0
+      ],
+      "count_index": 0,
+      "load": 0.988,
+      "flow_tph": 763.6,
+      "capacity_tph": 772.8,
+      "flag": "near",
+      "css_mm": 25,
+      "power_kw": 494.0,
+      "label": "单缸圆锥 SC1650 ×2"
+     },
+     {
+      "id": "n4",
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "model": "单缸圆锥 SC1650",
+      "stage": "secondary",
+      "pos": [
+       -22.98,
+       3.0,
+       3.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.5,
+       4.0,
+       3.0
+      ],
+      "footprint": [
+       4.5,
+       3.0
+      ],
+      "count_index": 1,
+      "load": 0.988,
+      "flow_tph": 763.6,
+      "capacity_tph": 772.8,
+      "flag": "near",
+      "css_mm": 25,
+      "power_kw": 494.0,
+      "label": "单缸圆锥 SC1650 ×2"
+     },
+     {
+      "id": "n5",
+      "role": "screening",
+      "eq_id": "SC_3YK2460",
+      "model": "3YK2460",
+      "stage": "screening",
+      "pos": [
+       -5.0,
+       8.0,
+       -2.95
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       7.0,
+       3.0,
+       2.9
+      ],
+      "footprint": [
+       7.0,
+       2.9
+      ],
+      "count_index": 0,
+      "load": 1.092,
+      "flow_tph": 763.6,
+      "capacity_tph": 699.2,
+      "flag": "overload",
+      "css_mm": null,
+      "power_kw": 90.0,
+      "label": "3YK2460 ×2"
+     },
+     {
+      "id": "n6",
+      "role": "screening",
+      "eq_id": "SC_3YK2460",
+      "model": "3YK2460",
+      "stage": "screening",
+      "pos": [
+       -5.0,
+       8.0,
+       2.95
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       7.0,
+       3.0,
+       2.9
+      ],
+      "footprint": [
+       7.0,
+       2.9
+      ],
+      "count_index": 1,
+      "load": 1.092,
+      "flow_tph": 763.6,
+      "capacity_tph": 699.2,
+      "flag": "overload",
+      "css_mm": null,
+      "power_kw": 90.0,
+      "label": "3YK2460 ×2"
+     }
+    ],
+    "belts": [
+     {
+      "from_id": "n1",
+      "to_id": "n2",
+      "p1": [
+       -46.0,
+       1.9,
+       0.0
+      ],
+      "p2": [
+       -39.3,
+       2.42,
+       0.0
+      ],
+      "length": 6.72,
+      "slope_deg": 4.5,
+      "ok": true
+     },
+     {
+      "from_id": "n2",
+      "to_id": "n3",
+      "p1": [
+       -34.7,
+       2.81,
+       0.0
+      ],
+      "p2": [
+       -25.23,
+       5.48,
+       -3.0
+      ],
+      "length": 10.29,
+      "slope_deg": 15.1,
+      "ok": true
+     },
+     {
+      "from_id": "n3",
+      "to_id": "n4",
+      "p1": [
+       -20.73,
+       5.88,
+       -3.0
+      ],
+      "p2": [
+       -25.23,
+       5.48,
+       3.0
+      ],
+      "length": 7.51,
+      "slope_deg": -3.1,
+      "ok": true
+     },
+     {
+      "from_id": "n4",
+      "to_id": "n5",
+      "p1": [
+       -20.73,
+       5.88,
+       3.0
+      ],
+      "p2": [
+       -8.5,
+       9.86,
+       -2.95
+      ],
+      "length": 14.17,
+      "slope_deg": 16.3,
+      "ok": true
+     },
+     {
+      "from_id": "n5",
+      "to_id": "n6",
+      "p1": [
+       -1.5,
+       10.16,
+       -2.95
+      ],
+      "p2": [
+       -8.5,
+       9.86,
+       2.95
+      ],
+      "length": 9.16,
+      "slope_deg": -1.9,
+      "ok": true
+     }
+    ],
+    "notes": [
+     "过载：ZSW-600×130（109%）、3YK2460（109%）。成品 420 t/h 时这些设备跑不动，实际产量会被它们卡住。",
+     "循环负荷 0.82，处于经验区间内。",
+     "二段与筛分的通过量是 764 t/h（成品 420 ÷ 通过率 0.55），不是 420。"
+    ],
+    "metrics": {
+     "throughput_tph": 420.0,
+     "circulating_load": 0.82,
+     "pass_fraction": 0.55,
+     "ton_power_kwh": 1.83,
+     "unit_cost_cny_t": 29.95,
+     "max_utilization": 1.092
+    },
+    "camera": {
+     "target": [
+      -26.75,
+      5.5,
+      0.0
+     ],
+     "distance": 53.5,
+     "pos": [
+      -57.8,
+      33.3,
+      36.4
+     ]
+    }
+   },
+   "after": {
+    "variant": "after",
+    "site": {
+     "w": 110,
+     "d": 55
+    },
+    "nodes": [
+     {
+      "id": "n1",
+      "role": "feed",
+      "eq_id": "FD_ZSW600x130",
+      "model": "ZSW-600×130",
+      "stage": "feed",
+      "pos": [
+       -49.0,
+       0.6,
+       -2.8
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       6.0,
+       1.8,
+       2.6
+      ],
+      "footprint": [
+       6.0,
+       2.6
+      ],
+      "count_index": 0,
+      "load": 0.647,
+      "flow_tph": 500.0,
+      "capacity_tph": 772.8,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 28.5,
+      "label": "ZSW-600×130 ×2",
+      "isNew": false
+     },
+     {
+      "id": "n2",
+      "role": "feed",
+      "eq_id": "FD_ZSW600x130",
+      "model": "ZSW-600×130",
+      "stage": "feed",
+      "pos": [
+       -49.0,
+       0.6,
+       2.8
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       6.0,
+       1.8,
+       2.6
+      ],
+      "footprint": [
+       6.0,
+       2.6
+      ],
+      "count_index": 1,
+      "load": 0.647,
+      "flow_tph": 500.0,
+      "capacity_tph": 772.8,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 28.5,
+      "label": "ZSW-600×130 ×2",
+      "isNew": false
+     },
+     {
+      "id": "n3",
+      "role": "primary",
+      "eq_id": "JC_PE1200x1500",
+      "model": "PE1200×1500",
+      "stage": "primary",
+      "pos": [
+       -37.0,
+       0.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.6,
+       3.9,
+       3.8
+      ],
+      "footprint": [
+       4.6,
+       3.8
+      ],
+      "count_index": 0,
+      "load": 0.97,
+      "flow_tph": 500.0,
+      "capacity_tph": 515.2,
+      "flag": "near",
+      "css_mm": 200,
+      "power_kw": 194.0,
+      "label": "PE1200×1500",
+      "isNew": false
+     },
+     {
+      "id": "n4",
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "model": "单缸圆锥 SC1650",
+      "stage": "secondary",
+      "pos": [
+       -22.98,
+       3.0,
+       -6.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.5,
+       4.0,
+       3.0
+      ],
+      "footprint": [
+       4.5,
+       3.0
+      ],
+      "count_index": 0,
+      "load": 0.784,
+      "flow_tph": 909.1,
+      "capacity_tph": 1159.2,
+      "flag": "ok",
+      "css_mm": 25,
+      "power_kw": 588.0,
+      "label": "单缸圆锥 SC1650 ×3",
+      "isNew": false
+     },
+     {
+      "id": "n5",
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "model": "单缸圆锥 SC1650",
+      "stage": "secondary",
+      "pos": [
+       -22.98,
+       3.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.5,
+       4.0,
+       3.0
+      ],
+      "footprint": [
+       4.5,
+       3.0
+      ],
+      "count_index": 1,
+      "load": 0.784,
+      "flow_tph": 909.1,
+      "capacity_tph": 1159.2,
+      "flag": "ok",
+      "css_mm": 25,
+      "power_kw": 588.0,
+      "label": "单缸圆锥 SC1650 ×3",
+      "isNew": false
+     },
+     {
+      "id": "n6",
+      "role": "secondary",
+      "eq_id": "CC_SG1650",
+      "model": "单缸圆锥 SC1650",
+      "stage": "secondary",
+      "pos": [
+       -22.98,
+       3.0,
+       6.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       4.5,
+       4.0,
+       3.0
+      ],
+      "footprint": [
+       4.5,
+       3.0
+      ],
+      "count_index": 2,
+      "load": 0.784,
+      "flow_tph": 909.1,
+      "capacity_tph": 1159.2,
+      "flag": "ok",
+      "css_mm": 25,
+      "power_kw": 588.0,
+      "label": "单缸圆锥 SC1650 ×3",
+      "isNew": false
+     },
+     {
+      "id": "n7",
+      "role": "screening",
+      "eq_id": "SC_3YK2460",
+      "model": "3YK2460",
+      "stage": "screening",
+      "pos": [
+       -5.0,
+       8.0,
+       -5.9
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       7.0,
+       3.0,
+       2.9
+      ],
+      "footprint": [
+       7.0,
+       2.9
+      ],
+      "count_index": 0,
+      "load": 0.867,
+      "flow_tph": 909.1,
+      "capacity_tph": 1048.8,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 117.0,
+      "label": "3YK2460 ×3",
+      "isNew": false
+     },
+     {
+      "id": "n8",
+      "role": "screening",
+      "eq_id": "SC_3YK2460",
+      "model": "3YK2460",
+      "stage": "screening",
+      "pos": [
+       -5.0,
+       8.0,
+       0.0
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       7.0,
+       3.0,
+       2.9
+      ],
+      "footprint": [
+       7.0,
+       2.9
+      ],
+      "count_index": 1,
+      "load": 0.867,
+      "flow_tph": 909.1,
+      "capacity_tph": 1048.8,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 117.0,
+      "label": "3YK2460 ×3",
+      "isNew": false
+     },
+     {
+      "id": "n9",
+      "role": "screening",
+      "eq_id": "SC_3YK2460",
+      "model": "3YK2460",
+      "stage": "screening",
+      "pos": [
+       -5.0,
+       8.0,
+       5.9
+      ],
+      "rot_y": 0.0,
+      "dims": [
+       7.0,
+       3.0,
+       2.9
+      ],
+      "footprint": [
+       7.0,
+       2.9
+      ],
+      "count_index": 2,
+      "load": 0.867,
+      "flow_tph": 909.1,
+      "capacity_tph": 1048.8,
+      "flag": "ok",
+      "css_mm": null,
+      "power_kw": 117.0,
+      "label": "3YK2460 ×3",
+      "isNew": false
+     }
+    ],
+    "belts": [
+     {
+      "from_id": "n1",
+      "to_id": "n2",
+      "p1": [
+       -46.0,
+       1.9,
+       -2.8
+      ],
+      "p2": [
+       -52.0,
+       1.72,
+       2.8
+      ],
+      "length": 8.21,
+      "slope_deg": -1.3,
+      "ok": true
+     },
+     {
+      "from_id": "n2",
+      "to_id": "n3",
+      "p1": [
+       -46.0,
+       1.9,
+       2.8
+      ],
+      "p2": [
+       -39.3,
+       2.42,
+       0.0
+      ],
+      "length": 7.28,
+      "slope_deg": 4.1,
+      "ok": true
+     },
+     {
+      "from_id": "n3",
+      "to_id": "n4",
+      "p1": [
+       -34.7,
+       2.81,
+       0.0
+      ],
+      "p2": [
+       -25.23,
+       5.48,
+       -6.0
+      ],
+      "length": 11.52,
+      "slope_deg": 13.4,
+      "ok": true
+     },
+     {
+      "from_id": "n4",
+      "to_id": "n5",
+      "p1": [
+       -20.73,
+       5.88,
+       -6.0
+      ],
+      "p2": [
+       -25.23,
+       5.48,
+       0.0
+      ],
+      "length": 7.51,
+      "slope_deg": -3.1,
+      "ok": true
+     },
+     {
+      "from_id": "n5",
+      "to_id": "n6",
+      "p1": [
+       -20.73,
+       5.88,
+       0.0
+      ],
+      "p2": [
+       -25.23,
+       5.48,
+       6.0
+      ],
+      "length": 7.51,
+      "slope_deg": -3.1,
+      "ok": true
+     },
+     {
+      "from_id": "n6",
+      "to_id": "n7",
+      "p1": [
+       -20.73,
+       5.88,
+       6.0
+      ],
+      "p2": [
+       -8.5,
+       9.86,
+       -5.9
+      ],
+      "length": 17.52,
+      "slope_deg": 13.1,
+      "ok": true
+     },
+     {
+      "from_id": "n7",
+      "to_id": "n8",
+      "p1": [
+       -1.5,
+       10.16,
+       -5.9
+      ],
+      "p2": [
+       -8.5,
+       9.86,
+       0.0
+      ],
+      "length": 9.16,
+      "slope_deg": -1.9,
+      "ok": true
+     },
+     {
+      "from_id": "n8",
+      "to_id": "n9",
+      "p1": [
+       -1.5,
+       10.16,
+       0.0
+      ],
+      "p2": [
+       -8.5,
+       9.86,
+       5.9
+      ],
+      "length": 9.16,
+      "slope_deg": -1.9,
+      "ok": true
+     }
+    ],
+    "notes": [
+     "循环负荷 0.82，处于经验区间内。",
+     "接近满负荷：PE1200×1500，没有余量，产量再往上必先动它。",
+     "二段与筛分的通过量是 909 t/h（成品 500 ÷ 通过率 0.55），不是 500。"
+    ],
+    "metrics": {
+     "throughput_tph": 500.0,
+     "circulating_load": 0.82,
+     "pass_fraction": 0.55,
+     "ton_power_kwh": 1.86,
+     "unit_cost_cny_t": 29.93,
+     "max_utilization": 0.97
+    },
+    "camera": {
+     "target": [
+      -26.75,
+      5.5,
+      0.0
+     ],
+     "distance": 54.8,
+     "pos": [
+      -58.6,
+      34.0,
+      37.3
+     ]
+    }
+   },
+   "economics": {
+    "delta_tph": 80.0,
+    "monthly_gain_cny": 703498,
+    "equipment_cny": 1710000,
+    "install_cny": 1539000,
+    "downtime_cny": 428047,
+    "investment_cny": 3677047,
+    "payback_months": 5.2,
+    "annual_gain_cny": 8441971,
+    "ton_power_delta": 0.03,
+    "margin_cny_t": 28.3,
+    "downtime_days": 3
+   },
+   "retrofit": [
+    {
+     "role": "feed",
+     "action": "add",
+     "eq_id": "FD_ZSW600x130",
+     "model": "ZSW-600×130",
+     "count_add": 1,
+     "price_cny": 230000,
+     "reason": "ZSW-600×130 负荷 129%，设备库无更大型号，加一台"
+    },
+    {
+     "role": "secondary",
+     "action": "add",
+     "eq_id": "CC_SG1650",
+     "model": "单缸圆锥 SC1650",
+     "count_add": 1,
+     "price_cny": 1200000,
+     "reason": "单缸圆锥 SC1650 在 500 t/h 时负荷 118%，加一台同型号最省"
+    },
+    {
+     "role": "screening",
+     "action": "add",
+     "eq_id": "SC_3YK2460",
+     "model": "3YK2460",
+     "count_add": 1,
+     "price_cny": 280000,
+     "reason": "3YK2460 在 500 t/h 时负荷 130%，加一台同型号最省"
+    }
+   ],
+   "notes": [
+    "过载：ZSW-600×130（109%）、3YK2460（109%）。成品 420 t/h 时这些设备跑不动，实际产量会被它们卡住。",
+    "硬度折减：按 medium 取 0.92，设备库标称能力已按此折减后再算负荷。",
+    "循环负荷 0.82，处于经验区间内。",
+    "二段与筛分的通过量是 764 t/h（成品 420 ÷ 通过率 0.55），不是 420。",
+    "改造要点：ZSW-600×130（add）；单缸圆锥 SC1650（add）；3YK2460（add）",
+    "改造总投约 368 万元，月增现金流 70.3 万元，静态回收期约 5.2 个月。"
+   ]
+  }
+ ]
+}
